@@ -1,2 +1,13 @@
-# InstagramBot
-Manage who you follow in instagram. Follow more people with a 30% chance of them following you back. Comes with commenting and liking features.
+=================== SETUP ===================
+
+pip install instapy
+
+============= CODE CONFIGURATION =============
+
+Add necessary account details to code
+
+Add necessary tags and comments
+
+============== RUNNING THE CODE ==============
+
+Run in terminal/ cmd/ text editor
