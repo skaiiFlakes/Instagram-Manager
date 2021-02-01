@@ -1,4 +1,4 @@
-from instapy import InstaPy
+vfrom instapy import InstaPy
 
 session = InstaPy(username = "username", password = "password") # Enter your instagram username and password
 session.login()
@@ -14,4 +14,4 @@ while True:
         print(e)
         pass
 
-# find out how to use this module more on https://instapy.org/settings/
+# find out more uses of this module on https://instapy.org/settings/
