@@ -9,7 +9,7 @@ while True:
         session.set_do_follow(True, percentage =100)
         session.set_do_comment(enabled=True, percentage=50) # optional
         session.like_by_tags(['tag1', 'tag2', 'tag3'], amount = 1) # Enter key words
-        session.set_comments(['Awesome', 'Really Cool', 'I like your work!', 'Woah']) # Set possible comments
+        session.set_comments(['comment1', 'comment2', 'comment3']) # Set possible comments
     except Exception as e:
         print(e)
         pass
