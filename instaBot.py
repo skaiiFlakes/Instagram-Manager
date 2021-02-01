@@ -1,4 +1,4 @@
-vfrom instapy import InstaPy
+from instapy import InstaPy
 
 session = InstaPy(username = "username", password = "password") # Enter your instagram username and password
 session.login()
