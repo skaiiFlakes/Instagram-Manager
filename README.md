@@ -1,13 +1,14 @@
-=================== SETUP ===================
+# Instagram Bot
+
+## Setup
 
 pip install instapy
 
-============= CODE CONFIGURATION =============
-
+## Code Configuration
 Add necessary account details to code
 
 Add necessary tags and comments
 
-============== RUNNING THE CODE ==============
+## Running The Code
 
 Run in terminal/ cmd/ text editor
