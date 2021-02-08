@@ -8,10 +8,11 @@ import time
 import concurrent.futures
 
 os.system("cls")
-file = open(r"C:\Users\ica\Coding Projects\Python\Instagram\hashtags.txt", "r").readlines()
+file = open(r"path to text file", "r").readlines() # input path to text file containing hashtags
 popularities = []
 popdict = {}
 
+# change these values to your liking
 variants = 8
 tags_per_list = 22
 max_dupes_per_tag = 6
@@ -69,10 +70,8 @@ def find_tag_popularity(tag):
     posts = int(posts.replace(",", ""))
     return tag, posts
 
-# taglist = [['#artstudio', '#instagramartist', '#photo', '#fineart', '#artjournal', '#love', '#artlover', '#traditionalart', '#drawings', '#artistofinstagram', '#art', '#artoftheday', '#artdaily', '#artistoninstagram', '#artsagram', '#sketchpad', '#hobby', '#coolart', '#myart', '#artsy'], ['#artjournal', '#artdaily', '#draw', '#art', '#artista', '#sketchpad',
-# '#follow', '#instagramart', '#artofvisuals', '#artsagram', '#artwork', '#illustration', '#beautiful', '#artgram', '#fineart', '#artistoninstagram', '#artsy', '#sketchbook', '#hobby', '#drawings'], ['#artist', '#draw', '#photo', '#myart', '#drawings', '#instaart', '#beautiful', '#artgram', '#artistoninstagram',
-# '#artjournal', '#love', '#follow', '#traditionalart', '#artsagram', '#artistic', '#art', '#sketchpad', '#artoftheday', '#sketchbook', '#cool'], ['#draw', '#artdaily', '#artsy', '#instagramart', '#follow', '#artist', '#arte', '#fineart', '#visualart', '#artoftheday', '#love', '#sketchbook', '#traditionalart', '#myart', '#beautiful', '#drawing', '#artgallery', '#coolart', '#instagramartist', '#artgram']]
-
+# if you already have a list of hashtags for each variant, paste them below to reduce runtime and comment out the generate tags function
+# taglist = [[], []] 
 taglist = generate_tags()
 
 for i in range(variants):
@@ -84,8 +83,9 @@ for tags in taglist:
         if tag not in used_tags:
             used_tags.append(tag)
 
-# popdict = {'#traditionalart': 12762037, '#photo': 378511848, '#love': 2014229200, '#instagramartist': 1369926, '#artjournal': 3095900, '#fineart': 25879995, '#artstudio': 5702776, '#artlover': 6242234, '#artsagram': 478897, '#art': 754338285, '#artoftheday': 47662207, '#drawings': 27908827, '#artistofinstagram': 4150064, '#artdaily': 3598698, '#sketchpad': 472509, '#artistoninstagram': 12329792, '#hobby': 20611603, '#coolart': 858412, '#artsy': 34021189, '#artista': 9163433, '#myart': 22992600, '#draw': 83872454, '#artofvisuals': 38795891, '#illustration': 154276422, '#instagramart': 2715232,
-# '#follow': 621601721, '#artgram': 4081377, '#beautiful': 718211943, '#artwork': 129387066, '#artist': 224911759, '#instaart': 76452693, '#sketchbook': 55936702, '#arte': 79920695, '#artistic': 23624160, '#cool': 168570394, '#visualart': 9462473, '#artgallery': 24042115, '#drawing': 220757439, '#design': 263653890, '#arts': 23999192, '#cute': 611299929, '#followforfollowback': 163510105, '#tbt': 562007916, '#instagood': 1286816968, '#fun': 408885298, '#like4like': 529719895, '#artlife': 9337565, '#artesanato': 13360268, '#me': 439936113, '#picoftheday': 627111069, '#myself': 23027945, '#photooftheday': 885204776, '#followme': 560612818}
+# if you already have a dictionary containing the popularity for your tags, just paste them here to reduce run time               
+# popdict = {}
+               
 poplist = taglist.copy()
 
 use_multiprocessors = False
