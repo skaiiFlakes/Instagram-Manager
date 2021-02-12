@@ -8,7 +8,7 @@ pip install instapy
 ### Code Configuration
 Add necessary account details to code
 
-Add necessary tags and comments
+Add necessary tags, comments, and follower usernames
 
 ### Running The Code
 
@@ -34,11 +34,6 @@ toggle find_popularity() on or off
 ### Running The Code
 
 run in cmd/ terminal
-
-## Unfollower Bot
-### Setup
-### Code Configuration
-### Running The Code
 
 ## Auto Post
 ### Setup
